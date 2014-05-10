@@ -79,4 +79,21 @@ module.exports = {
             return res.json(e);
         });
     },
+
+    tags: function(req, res) {
+        Elder.find({}).then(function(elders) {
+            console.log('elders.length = ', elders.length);
+            var arrays = [];
+
+            for(var i = 0; i < elders.length; i++) {
+                arrays = _.union(arrays, elders[i].tags);
+            }
+
+            console.log(arrays);
+            return res.json(arrays);
+        }).fail(function(){
+            return res.json({});
+        });
+
+    }
 };
