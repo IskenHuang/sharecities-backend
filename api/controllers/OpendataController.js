@@ -15,7 +15,8 @@ var CSV = require('csv'),
     FS = require('fs'),
     request = require('request'),
     coeat = require('./../../assets/opendata/coeat.json'),
-    taipeiHospital = require('./../../assets/opendata/taipeiHospital.json');
+    taipeiHospital = require('./../../assets/opendata/taipeiHospital.json'),
+    toilet = require('./../../assets/opendata/toilet.json');
 
 
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
         return res.json({
             'food': coeat,
             'hospital': taipeiHospital,
+            'toilet': toilet,
         });
     },
 	coeat: function (req, res) {
@@ -32,4 +34,7 @@ module.exports = {
     hospital: function(req, res) {
         return res.json(taipeiHospital);
     },
+    toilet: function(req, res) {
+        return res.json(toilet);
+    }
 };
