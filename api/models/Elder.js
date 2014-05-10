@@ -11,6 +11,11 @@ module.exports = {
         name: {
             type: 'string',
             required: true,
+            unique: true
+        },
+        description: {
+            type: 'string',
+            defaultsTo: ''
         },
         birthday: {
             type: 'datetime',
@@ -31,6 +36,10 @@ module.exports = {
         longitude: {
             type: 'float',
             defaultsTo: 121.5375365,
+        },
+        tags: {
+            type: 'array',
+            defaultsTo: []
         },
         getLocation: function() {
             return {
