@@ -10,8 +10,23 @@
 
 var Q = require('q');
 
-module.exports.bootstrap = function (cb) {
+// var data = require('./../assets/opendata/coeat.json');
 
+module.exports.bootstrap = function (cb) {
+    // var results = [];
+    // _.each(data, function(obj) {
+    //     results.push(sails.services.geocoder.geocoder(obj['據點名稱']))
+    // });
+
+    // Q.all(results).spread(function(){
+    //     // console.log('a = ', a);
+    //     _.each(arguments, function(aa){
+    //         console.log('aa = ', aa.results);
+    //         if(aa.results.length) {
+    //             console.log('aa.results[0].geometry = ', aa.results[0].geometry);
+    //         }
+    //     });
+    // });
 
     // It's very important to trigger this callack method when you are finished
     // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
