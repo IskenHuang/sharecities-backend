@@ -7,8 +7,42 @@
 
 module.exports = {
 
-  attributes: {
+    attributes: {
+        name: {
+            type: 'string',
+            required: true,
+        },
+        birthday: {
+            type: 'datetime',
+            defaultsTo: new Date('2000/1/1')
+        },
+        skills: {
+            type: 'array',
+            defaultsTo: [],
+        },
+        requirement: {
+            type: 'array',
+            defaultsTo: [],
+        },
+        latitude: {
+            type: 'float',
+            defaultsTo: 25.040622,
+        },
+        longitude: {
+            type: 'float',
+            defaultsTo: 121.5375365,
+        },
+        getLocation: function() {
+            return {
+                latitude: this.latitude,
+                longitude: this.longitude,
+            };
+        },
+    },
 
-  }
+    beforeCreate: function(elder, cb) {
+        sails.log.info('beforeCreate elder = ', elder);
+        cb(null, elder);
+    },
 };
 

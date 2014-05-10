@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "bcrypt": "^0.7.8",
+    "csv": "^0.3.7",
     "ejs": "~0.8.4",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
@@ -28,7 +29,7 @@
     "q": "^1.0.1",
     "rc": "~0.3.3",
     "sails": "~0.10.0-rc5",
-    "sails-disk": "~0.10.0"
+    "sails-mongo": "^0.10.0-rc4"
   },
   "scripts": {
     "start": "node app.js",

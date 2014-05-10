@@ -47,14 +47,15 @@ module.exports.connections = {
     //
     // Run:
     // npm install sails-mongo
+    // mongo ds043329.mongolab.com:43329/elder-dev -u <dbuser> -p <dbpassword>
     //
     someMongodbServer: {
         adapter   : 'sails-mongo',
-        host      : 'localhost',
-        port      : 27017,
-        user      : 'username',
-        password  : 'password',
-        database  : 'your_mongo_db_name_here'
+        host      : 'ds043329.mongolab.com',
+        port      : 43329,
+        user      : 'elder',
+        password  : 'redle',
+        database  : 'elder-dev'
     },
 
     // PostgreSQL is another officially supported relational database.
