@@ -25,6 +25,10 @@ module.exports = {
             type: 'integer',
             defaultsTo: 80
         },
+        gender: {
+            type: 'string',
+            defaultsTo: 'man'
+        },
         skills: {
             type: 'array',
             defaultsTo: [],
