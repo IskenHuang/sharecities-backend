@@ -15,7 +15,7 @@ module.exports = {
             }else{
                 deferred.resolve(data);
             }
-        });
+        }, { language: 'zh-TW' });
 
         return deferred.promise;
     },
@@ -29,7 +29,7 @@ module.exports = {
             }else{
                 deferred.resolve(data);
             }
-        });
+        }, { language: 'zh-TW' });
 
         return deferred.promise;
     },
