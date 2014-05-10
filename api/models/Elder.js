@@ -21,6 +21,10 @@ module.exports = {
             type: 'datetime',
             defaultsTo: new Date('2000/1/1')
         },
+        age: {
+            type: 'integer',
+            defaultsTo: 80
+        },
         skills: {
             type: 'array',
             defaultsTo: [],
