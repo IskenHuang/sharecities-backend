@@ -49,7 +49,7 @@ module.exports = {
         params = _.extend(defautls, params);
         params.latitude = parseFloat(params.latitude);
         params.longitude = parseFloat(params.longitude);
-        params.scope = params.scope / 1000000;
+        params.scope = params.scope / 100000;
         console.log('params = ', params);
 
         console.log('getLatitude( params.latitude, params.scope) = ', getLatitude( params.latitude, params.scope));
