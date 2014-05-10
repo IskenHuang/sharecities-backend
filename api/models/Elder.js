@@ -59,6 +59,20 @@ module.exports = {
 
     beforeCreate: function(elder, cb) {
         sails.log.info('beforeCreate elder = ', elder);
+        var randomArray = [
+                '臺北市北投區石牌路2段201號',
+                '110台北市永吉路278巷42弄13號',
+                '台北市遼寧街65-81號',
+                '106台北市大安區忠孝東路三段44號',
+                '100杭州南路一段8號',
+                '台北市中山區雙城街10號之1',
+                '116興隆路四段105巷1號4樓',
+            ],
+            randomlimit = randomArray.length;
+            randomNumber = Math.round(Math.random(0,randomlimit) * 10);
+
+        elder.address = randomArray[randomNumber];
+
         cb(null, elder);
     },
 };
